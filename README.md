@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project was inspired by the **Wikipedia SpeedRuns** game, which encouraged me to think of Wikipedia as a directed graph, where each page represents an article, and links between them serve as directed edges. Initially, I thought it would an interesting idea to try to cluster Wikipedia articles based on network properties, such as clustering coefficients and betweenness centrality, as well as the Louvain method for community detection. However, these approaches did not produce satisfactory results.
+This project was inspired by the [**Wikipedia SpeedRuns**](https://wikispeedruns.com/) game, which encouraged me to think of Wikipedia as a directed graph, where each page represents an article, and links between them serve as directed edges. Initially, I thought it would an interesting idea to try to cluster Wikipedia articles based on network properties, such as clustering coefficients and betweenness centrality, as well as the Louvain method for community detection. However, these approaches did not produce satisfactory results.
 
 I then shifted my focus to a textual-based approach wherein which I attempted to use word frequencies as a heuristic for determining page similarity, but this method proved too simplistic and ultimately unsuccessful. It became clear that a more sophisticated analysis was necessary, one that utilized semantic understanding rather than mere frequency counts.
 
@@ -18,7 +18,7 @@ To achieve a more meaningful clustering of Wikipedia articles, I implemented a c
 
 4. **Dimensionality Reduction**: Given the high dimensionality of the embeddings, I applied **UMAP** (Uniform Manifold Approximation and Projection) for dimensionality reduction, allowing for visualization in a two-dimensional space while mostly preserving the structure of the original data.
 
-5. **Clustering**: To identify distinct groups within the articles, I employed **K-Means clustering**., determining the optimal number of clusters using silhouette scores, which measure the quality of the clusters formed.
+5. **Clustering**: To identify distinct groups within the articles, I employed **K-Means clustering**, determining the optimal number of clusters using silhouette scores, which measure the quality of the clusters formed.
 
 6. **Visualization**: Finally, I created an interactive scatter plot using **Plotly** to visualize the clustered articles in the UMAP-reduced space. The plot allows for easy exploration of the clusters, with hover functionality displaying the titles of the articles.
 
